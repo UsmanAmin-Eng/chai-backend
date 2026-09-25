@@ -1,0 +1,17 @@
+{
+  "name": "newbackend-project",
+  "version": "1.0.0",
+  "description": "a backend at chai and code channel -youtube",
+  "keywords": [
+    "javascript",
+    "backend",
+    "chai"
+  ],
+  "license": "ISC",
+  "author": "Usman",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
