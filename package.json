@@ -2,7 +2,6 @@
   "name": "newbackend-project",
   "version": "1.0.0",
   "description": "a backend at chai and code channel -youtube",
-  "types": "module",
   "keywords": [
     "javascript",
     "backend",
@@ -10,12 +9,18 @@
   ],
   "license": "ISC",
   "author": "Usman",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.9"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.3"
   }
 }
