@@ -1,23 +1,21 @@
-import { Router } from "express"; 
-import { registerUser } from "../controllers/user.contollers.js";
-import {upload} from "../middlewares/muliter.middleware.js";
+import { Router } from 'express';
+import { registerUser } from '../controllers/user.contollers.js';
+import { upload } from '../middlewares/multer.middlewares.js';
 
-const router = Router()
+const router = Router();
 
-router.route("/register").post(
-    upload.fields([ // middleware injection
-        {
-            name: "avatar",
-            maxCount: 1
-        },
-        {
-            name: "coverimage",
-            maxCount:1
-        },
-    ]),
-    registerUser
-)
-// router.route("/login").post(login)
+router.route('/register').post(
+  upload.fields([
+    {
+      name: 'avatar',
+      maxCount: 1,
+    },
+    {
+      name: 'coverImage',
+      maxCount: 1,
+    },
+  ]),
+  registerUser
+);
 
-
-export default router
+export default router;
